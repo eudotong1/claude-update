@@ -10,6 +10,9 @@ into a short briefing filtered to what they actually run.
 
 ## Steps
 
+If a SessionStart message says Claude Code already updated (from the
+`autobrief.sh` hook), skip steps 1-2 and start at step 3 with `--since-briefed`.
+
 1. **Record the starting version.** `command claude --version` (use `command`
    in case `claude` is a shell wrapper) and `readlink ~/.local/bin/claude`.
 2. **Update.** `command claude update`, then confirm with `command claude --version`.
